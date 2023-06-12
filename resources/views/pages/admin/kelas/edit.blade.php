@@ -29,7 +29,7 @@
                                 @method('PUT')
                                 <div class="form-group">
                                     <label for="nama_kelas">Nama Kelas</label>
-                                    <input type="text" id="nama_kelas" name="nama_kelas" class="form-control @error('nama_kelas') is-invalid @enderror" placeholder="{{ __('Nama Mata Pelajaran') }}" value="{{ $kelas->nama_kelas }}">
+                                    <input type="text" id="nama_kelas" name="nama_kelas" class="form-control @error('nama_kelas') is-invalid @enderror" placeholder="{{ __('Masukan nama Kelas') }}" value="{{ $kelas->nama_kelas }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="guru_id">Wali Kelas</label>

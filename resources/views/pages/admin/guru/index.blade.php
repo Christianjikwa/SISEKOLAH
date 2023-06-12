@@ -6,7 +6,8 @@
 <section class="section custom-section">
     <div class="section-body">
         <div class="row">
-            <div class="col-12">
+           <div class="table table-bordered">
+           <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4>List Guru</h4>
@@ -60,6 +61,8 @@
                     </div>
                 </div>
             </div>
+
+           </div>
             <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

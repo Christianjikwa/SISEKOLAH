@@ -39,6 +39,7 @@
                                         <th>No</th>
                                         <th>Nama User</th>
                                         <th>Roles</th>
+                                        <th>Password</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -48,6 +49,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $data->name }}</td>
                                         <td>{{ $data->roles }}</td>
+                                        <td>{{ $data->password}}</td>
                                         <td>
                                             <div class="d-flex">
                                                 <form method="POST" action="{{ route('user.destroy', $data->id) }}">

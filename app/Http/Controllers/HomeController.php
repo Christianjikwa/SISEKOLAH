@@ -9,6 +9,8 @@ use App\Models\Mapel;
 use App\Models\Materi;
 use App\Models\Siswa;
 use App\Models\Tugas;
+use App\Models\Pengumuman;
+
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +45,13 @@ class HomeController extends Controller
         $mapel = Mapel::count();
         $siswaBaru = Siswa::orderByDesc('id')->take(5)->orderBy('id')->first();
 
-        return view('pages.admin.dashboard', compact('siswa', 'guru', 'kelas', 'mapel', 'siswaBaru'));
+        $pengumuman = Pengumuman::orderBy('created_at', 'desc')->take(5)->get();
+
+        return view('pages.admin.dashboard', compact('siswa', 'guru', 'kelas', 'mapel', 'siswaBaru', 'pengumuman'));
+
+        // $pengumuman = Pengumuman::orderBy('created_at', 'desc');
+
+        // return view('pages.admin.dashboard', compact('siswa', 'guru', 'kelas', 'mapel', 'siswaBaru', 'pengumuman'));
     }
 
     public function guru()
@@ -54,8 +62,9 @@ class HomeController extends Controller
         $tugas = Tugas::where('guru_id', $guru->id)->count();
         $hari = Carbon::now()->locale('id')->isoFormat('dddd');
 
-        return view('pages.guru.dashboard', compact('guru', 'materi', 'jadwal', 'hari', 'tugas'));
-    }
+        $pengumuman = Pengumuman::orderBy('created_at', 'desc')->take(5)->get();
+
+        return view('pages.guru.dashboard', compact('guru', 'materi', 'jadwal', 'hari', 'tugas','pengumuman'));    }
 
     public function siswa()
     {
@@ -65,6 +74,16 @@ class HomeController extends Controller
         $tugas = Tugas::where('kelas_id', $kelas->id)->limit(3)->get();
         $jadwal = Jadwal::where('kelas_id', $kelas->id)->get();
         $hari = Carbon::now()->locale('id')->isoFormat('dddd');
+
         return view('pages.siswa.dashboard', compact('materi', 'siswa', 'kelas', 'tugas', 'jadwal', 'hari'));
     }
+
+    // public function dashboard()
+    // {
+    //     $pengumuman = Pengumuman::orderBy('created_at', 'desc')->take(5)->get();
+
+    //     return view('pages.guru.dashboard', compact('guru', 'materi', 'jadwal', 'hari', 'tugas','pengumuman'));
+    // }
+
+
 }

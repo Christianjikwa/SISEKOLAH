@@ -4,7 +4,7 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Dashboard</h1>
+        <h1>SISEKOLAH</h1>
     </div>
 
     <div class="section-body">
@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-12 col-sm-12 col-lg-4">
                 <div class="card card-hero" style="margin-top: 36px">
@@ -83,7 +84,6 @@
                         <div class="card-icon">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h4>{{ $materi->count() }}</h4>
                         <div class="card-description">Materi Tersedia</div>
                     </div>
                     <div class="card-body p-0">
@@ -124,7 +124,7 @@
                         <div class="card-icon">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h4>{{ $tugas->count }}</h4>
+
                         <div class="card-description">Tugas Tersedia</div>
                     </div>
                     <div class="card-body p-0">

@@ -24,7 +24,7 @@
       <!-- Main Content -->
       <div class="main-content">
         @yield('content')
-      </div>
+      </div>    
 
       {{-- Footer --}}
       @include('partials.footer')

@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'List Jurusan')
-
 @section('content')
 <section class="section custom-section">
     <div class="section-body">
@@ -39,6 +38,7 @@
                                         <td>
                                             <div class="d-flex">
                                                 <a href="{{ route('jurusan.edit', $data->id) }}" class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                                                <a href="{{ route('siswa.show', Crypt::encrypt($data->id)) }}" class="btn btn-primary btn-sm" style="margin-right: 8px"><i class="nav-icon fas fa-user"></i> &nbsp; Profile</a>
                                                 <form method="POST" action="{{ route('jurusan.destroy', $data->id) }}">
                                                     @csrf
                                                     @method('delete')

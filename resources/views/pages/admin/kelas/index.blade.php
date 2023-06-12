@@ -3,7 +3,7 @@
 
 @section('content')
     <section class="section custom-section">
-        <div class="section-body">
+        <div class="section-body"><br><br>
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -61,7 +61,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Tambah Mata Pelajaran</h5>
+                                <h5 class="modal-title">Tambah Data Kelas</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
@@ -85,7 +85,7 @@
                                             @endif
                                             <div class="form-group">
                                                 <label for="nama_kelas">Nama Kelas</label>
-                                                <input type="text" id="nama_kelas" name="nama_kelas" class="form-control @error('nama_kelas') is-invalid @enderror" placeholder="{{ __('Nama Kelas') }}">
+                                                <input type="text" id="nama_kelas" name="nama_kelas" class="form-control @error('nama_kelas') is-invalid @enderror" placeholder="{{ __('Masukan Nama Kelas') }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="guru_id">Wali Kelas</label>

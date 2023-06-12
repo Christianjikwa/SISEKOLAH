@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4>List Siswa</h4>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="nav-icon fas fa-folder-plus"></i>&nbsp; Tambah Data Guru</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="nav-icon fas fa-folder-plus"></i>&nbsp; Tambah Data Siswa</button>
                     </div>
                     <div class="card-body">
                         @if ($message = Session::get('success'))
@@ -30,6 +30,7 @@
                                         <th>Nama Siswa</th>
                                         <th>NIS</th>
                                         <th>Kelas</th>
+
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -40,6 +41,7 @@
                                         <td>{{ $data->nama }}</td>
                                         <td>{{ $data->nis }}</td>
                                         <td>{{ $data->kelas->nama_kelas }}</td>
+
                                         <td>
                                             <div class="d-flex">
                                                 <a href="{{ route('siswa.show', Crypt::encrypt($data->id)) }}" class="btn btn-primary btn-sm" style="margin-right: 8px"><i class="nav-icon fas fa-user"></i> &nbsp; Profile</a>

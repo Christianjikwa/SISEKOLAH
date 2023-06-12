@@ -29,5 +29,12 @@ class SiswaSeeder extends Seeder
             'telp' => '089876543210',
             'alamat' => 'Jl. Siska Saraswati',
         ]);
+        DB::table('siswas')->insert([
+            'nama' => 'Niel Penggu',
+            'nis' => '11420018',
+            'kelas_id' => 3,
+            'telp' => '081343325341',
+            'alamat' => 'Jl. kembu tolikara',
+        ]);
     }
 }

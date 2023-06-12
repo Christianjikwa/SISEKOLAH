@@ -21,5 +21,6 @@ class JurusanSeeder extends Seeder
         DB::table('jurusans')->insert([
             'nama_jurusan' => 'IPS',
         ]);
+
     }
 }

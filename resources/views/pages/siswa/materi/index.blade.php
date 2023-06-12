@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'List User')
-
 @section('content')
     <section class="section custom-section">
         <div class="section-body">
